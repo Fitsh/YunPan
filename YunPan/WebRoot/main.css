@@ -1,0 +1,115 @@
+*{
+	color:black;
+	text-decoration:none;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	width:100%;
+	background: url(Images/300753.jpg) no-repeat 0% 0% ;
+	background-size: cover;
+	font-family: Microsoft YaHei,SimHei,Tahoma!important;
+	font-size: 14px;
+	text-decoration: none;
+	color: white;
+}
+a{
+	text-decoration:none;
+}
+.header{
+	
+	position:absolute;
+	padding: 10px 1% 8px 8%;
+	width: 80%;
+	height: 12%;
+	display:inline;
+}
+.FL{
+	
+	font-size:30px;
+	float:left;
+	display:inline;
+	color:white;
+}
+.FL span{
+	text-align:center;
+	color:white;
+}
+.FR span{
+
+}
+.FR{
+	font-size:20px;
+	float:right;
+	display:inline;
+}
+.frame_aside{
+	display:block;
+	font-size: 16px;
+	padding:1% 0;
+	position:absolute;
+	top:12%;
+	left: 0%;
+	width:20%;
+	height:84%;
+	background-color: rgb(93,126,135);
+	z-index: 100;
+	opacity:0.7;
+	text-align: center;
+	color:white;
+}
+.frame_aside div{
+	line-height:400%;
+}
+.frame_aside a{
+	display: block;
+	color:white;
+}
+.frame_aside a:hover{
+background-color:gray;
+}
+.frame-main{
+	color: black;
+	position:absolute;
+	top: 12%;
+	left:20%;
+	width:80%;
+	height:84%;
+	opacity: 0.7;
+	background-color:white;
+}
+.list_m{
+	
+	width: 100%;
+	height: 30px;
+	background-color:white;
+}
+.list_main{
+	
+	display:inline-block;
+	padding-left:3%;
+	width: 30%;
+	height:auto;
+}
+.list_span{
+	
+	display:inline-block;
+	width:20%;
+	height:auto;
+}
+#logo{
+	opacity:0.5;
+	width:100px;
+	height:50px;
+}
+#touxiang{
+	width:50px;
+	height:40px;
+}
+.sign{
+	width:20px;
+	height:20px;
+}
+.list_span a:hover,a:active{
+	color:blue;
+}

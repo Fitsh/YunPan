@@ -1,0 +1,116 @@
+@CHARSET "UTF-8";
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+}
+body{
+	background: rgb(93,126,135);
+	
+	font-size: 16px;
+	font-family:Microsoft YaHei,SimHei,Tahoma!important;
+	line-height: normal;
+}
+.login_container .ibg-bg{
+  position:absolute;
+	width:100%;
+	height:100%;
+	display:inline;
+	color: white;
+	background-size:cover;
+}
+.login_container{
+  position: relative;
+  height:610px;
+	width: 100%;
+}
+div.index-bg{
+	background-size:100% 100%;
+}
+.header{
+position: absolute;
+height: 60px;
+width: 100%;
+left:0;
+z-index: 100;
+font-size:25px;
+color: white;
+}
+div.logo{
+padding-top: 1%;
+padding-left:8%;
+float:left;
+color: white;
+}
+.yun-logo{
+color: white;
+}
+.login-title a{
+color: white;
+}
+div.login-title{
+	padding-top: 1%;
+	padding-right: 8%;
+float:right;
+}
+.showWin{
+padding:20px;
+background: #e0e0e0;
+position: fixed;
+top: 20%;
+left: 65%;
+width:25%;
+height:35%;
+font-size: 20px;
+}
+.B1{
+	margin: 20px;
+}
+.B1 a{
+margin: 20px;
+}
+.login_Input{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #e0e0e0;
+	border-radius: 16px;
+	background-color: #E8E8E8;
+	padding:3px 0px;
+	outline: 0px;
+	cursor: auto;
+}
+button{
+margin-top: 10px;
+padding: 2% 8%;
+}
+.submit{
+float: left;
+background-color: #607D8B;
+}
+.reset{
+float: right;
+background-color: #607D8B;
+}
+.RM_1{
+	font-size: 10px;
+}
+.showLogin{
+	z-index: -100;
+	opacity: 0.8;
+}
+.showRegister{
+	height: 42%;
+	z-index: -100;
+	opacity: 0.8;
+}
+.IB{
+display: inline-block;
+}
+.footer{
+	z-index:100;
+	text-align: center;
+	font-size: 18px;
+	color: black;
+	padding-bottom:10px;
+	
+}

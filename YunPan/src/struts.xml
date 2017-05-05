@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.multipart.maxSize" value="2149580800" />
+	<package name="default" namespace="/" extends="struts-default">
+		 
+		<!-- 定义系统的拦截器 -->
+		 
+		    <interceptors>
+			 
+			<interceptor name="authority" 
+				class="com.YunPan.action.interceptor.AuthorityInterceptor" />
+			
+			<interceptor-stack name="auctionStack">
+			
+				<interceptor-ref name="defaultStack" />
+				
+				<interceptor-ref name="authority" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="auctionStack" />
+		
+		<global-results>
+			<result name="login">index.jsp</result>
+			<result name="exception">error.jsp</result>
+		</global-results>
+	    <global-exception-mappings>
+			<exception-mapping result="exception" 
+			exception="com.YunPan.action.interceptor.AuthorityInterceptor" />
+			<exception-mapping exception="java.lang.Exception" result="exception" />
+		</global-exception-mappings>
+		
+	</package>
+	<package name="mylogin" namespace="/Users" extends="default">
+		<action name="User_login" class="com.YunPan.action.UserAction" method="login">
+			<result name="login_success"> /main.jsp
+			</result>
+			<result name="login_failure"> /login_error.jsp</result>
+			<!-- 显式引用系统默认的拦截器栈 -->
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+		<action name="User_register" class="com.YunPan.action.UserAction" method="register">
+			<result name="register_success"> /main.jsp
+			</result>
+			<result name="register_failure"> /register_error.jsp</result>
+			<!-- 显式引用系统默认的拦截器栈 -->
+			<interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+	
+	<include file="struts-upload.xml" />
+ 	<include file="struts-download.xml" />
+	 <package name="myfile" namespace="/Files" extends="default">
+	 	<action name="file_findByType" class="com.YunPan.action.fileAction" method="findByType">
+	 		<result name="music">/music.jsp </result>
+	 	
+	 		<result name="vedio">/vedio.jsp </result>
+	 	
+	 		<result name="doc">/doc.jsp </result>
+	 	
+	 		<result name="other"> /other.jsp </result>
+	 	
+	 		<result name="pic">/pic.jsp </result>
+	 		<interceptor-ref name="defaultStack" />
+	 	</action>
+	 	<action name="file_findByPath" class="com.YunPan.action.fileAction" method="findByPath">
+	 		<result name="success">/files.jsp </result>
+	 		<interceptor-ref name="defaultStack" />
+	 	</action>
+	 	<action name="file_del" class="com.YunPan.action.fileAction" method="del">
+	 		<result name="success">/main.jsp </result>
+	 		<result name="error">/main.jsp</result>
+	 		<interceptor-ref name="defaultStack" />
+	 	</action>
+	 </package>
+	
+</struts>
+  
